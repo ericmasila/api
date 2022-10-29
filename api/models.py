@@ -1,11 +1,10 @@
-
-from locale import currency
 from django.db import models
 
 class Api(models.Model):
     name = models.CharField(max_length=500)
     brand = models.CharField(max_length=500)
-    description = models.CharField(max_length=700)
+    description = models.TextField()
+    image = models.ImageField()
     # price = models.IntegerField(default=0)
     # currency = models.CharField(max_length=20)
     # in_stock = models.CharField(max_length=10)
@@ -15,3 +14,4 @@ class Api(models.Model):
 
     def __str__(self):
         return self.name
+
